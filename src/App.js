@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Shimmer } from "react-shimmer-loader";
+import "./App.css";
 
-function App() {
+const ShimmerExample = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="parentContainer">
+      <div className="container">
+        <Shimmer width={50} height={50} borderRadius={"50%"}></Shimmer>
+        <Shimmer width={200} height={100}>
+          <p>Description</p>
+        </Shimmer>
+        <Shimmer width={300} height={20}>
+          <p>Github</p>
+        </Shimmer>
+        <Shimmer width={300} height={20}>
+          <p>Github</p>
+        </Shimmer>
+        <Shimmer width={200} height={20}>
+          <p>Github</p>
+        </Shimmer>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default ShimmerExample;
